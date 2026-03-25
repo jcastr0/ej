@@ -1,0 +1,39 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+
+const Navbar = () => {
+  return (
+    <nav className="bg-white border-b border-gray-100 py-4 px-4 sticky top-0 z-50 shadow-sm">
+      <div className="container mx-auto max-w-7xl flex items-center justify-between">
+        <Link to="/" className="flex-shrink-0">
+          <img 
+            src="https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/logo_ej-K18L6.png" 
+            alt="Emprendiendo Juntas" 
+            className="h-10 w-auto"
+          />
+        </Link>
+        <div className="flex items-center gap-6">
+          <Link to="/" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
+            Inicio
+          </Link>
+          <Link to="/nosotras" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
+            Acerca de
+          </Link>
+          <Link to="/blog" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
+            Blog
+          </Link>
+          <Button 
+            variant="outline"
+            onClick={() => window.open('https://forms.gle/dWsJkrFRC5dkt6mF8', '_blank')}
+            className="hidden sm:flex border-[#A169A2] text-[#A169A2] hover:bg-[#A169A2] hover:text-white transition-all"
+          >
+            Únete
+          </Button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
