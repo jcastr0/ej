@@ -38,7 +38,7 @@ const MobileNav = ({ scrolled = false }) => {
           {/* Logo */}
           <div className="p-6 border-b border-gray-100">
             <img
-              src="/images/logo_ej.png"
+              src="/images/logo_ej.svg"
               alt="Emprendiendo Juntas"
               className="h-10 w-auto"
             />

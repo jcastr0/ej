@@ -36,9 +36,10 @@ const Navbar = () => {
 			<div className="container mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
 				<Link to="/" className="flex-shrink-0">
 					<img
-						src="/images/logo_ej.png"
+						src="/images/logo_ej.svg"
 						alt="Emprendiendo Juntas"
-						className="h-10 w-auto"
+						className="h-10 w-auto transition-all duration-500"
+						style={scrolled ? {} : { filter: 'brightness(0) invert(1)' }}
 					/>
 				</Link>
 

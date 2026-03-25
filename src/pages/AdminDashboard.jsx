@@ -35,7 +35,7 @@ const AdminDashboard = () => {
       author: {
         name: formData.authorName,
         role: 'Editor',
-        image: '/images/logo_ej.png'
+        image: '/images/logo_ej.svg'
       }
     };
 
