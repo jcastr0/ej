@@ -33,7 +33,7 @@ const Navbar = () => {
 					: 'bg-transparent'
 			}`}
 		>
-			<div className="container mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
+			<div className="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
 				<Link to="/" className="flex-shrink-0">
 					<img
 						src="/images/logo_ej.svg"

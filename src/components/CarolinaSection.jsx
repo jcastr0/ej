@@ -14,9 +14,9 @@ const CarolinaSection = ({ variant = 'compact' }) => {
 
 /* ───────────── Compact — Para el Home ───────────── */
 const CompactVariant = () => (
-  <section className="py-10 sm:py-24 px-0 sm:px-6">
-    <div className="sm:container sm:mx-auto sm:max-w-6xl">
-      <div className="relative bg-[#19152A] sm:rounded-[2rem] overflow-hidden">
+  <section className="py-16 sm:py-24">
+    <div className="max-w-6xl mx-auto px-5 sm:px-8">
+      <div className="relative bg-[#19152A] rounded-2xl sm:rounded-[2rem] overflow-hidden">
         <div className="flex flex-col md:grid md:grid-cols-5 md:min-h-[480px]">
           <motion.div
             initial={{ opacity: 0 }}

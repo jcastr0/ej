@@ -56,8 +56,8 @@ const Contact = () => {
     color: "text-black"
   }];
 
-  return <footer className="bg-[#19152A] text-white py-10 sm:py-14 px-4">
-    <div className="sm:container sm:mx-auto sm:max-w-7xl">
+  return <footer className="bg-[#19152A] text-white py-12 sm:py-14 px-5 sm:px-8">
+    <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           <motion.div initial={{
           opacity: 0,
