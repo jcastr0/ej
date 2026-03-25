@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Search, Loader2 } from 'lucide-react';
+import { Search, Loader2, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { CATEGORIES } from '@/data/categories';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/components/ui/use-toast';
@@ -125,6 +126,21 @@ const BlogSidebar = ({ onSearch, onCategorySelect, activeCategory }) => {
             )}
           </button>
         </form>
+      </div>
+
+      {/* Membership CTA Widget */}
+      <div className="bg-[#F5EEF8] p-6 rounded-2xl border border-purple-200">
+        <h3 className="font-bold text-gray-900 text-lg mb-2">¿Quieres crecer con acompañamiento real?</h3>
+        <p className="text-gray-600 text-sm mb-4">
+          Conoce el Círculo Emprendiendo Juntas — planes desde $25.000/mes.
+        </p>
+        <Link
+          to="/membresia"
+          className="inline-flex items-center gap-1.5 bg-[#A169A2] text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-[#8d5a8e] transition-colors"
+        >
+          Ver planes
+          <ArrowRight className="w-4 h-4" />
+        </Link>
       </div>
 
     </div>

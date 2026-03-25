@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Instagram } from 'lucide-react';
+import { Mail, MapPin, Instagram, MessageCircle } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { Link } from 'react-router-dom';
 
@@ -28,11 +28,22 @@ const Contact = () => {
        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12.5 7.5c-2.41 0 -5.5 .5 -5.5 4.5s2.5 4.5 5.5 4.5c2.5 0 3.5 -2.5 3.5 -2.5s-.5 -2.5 -3.5 -2.5c-2.4 0 -3 2 -3 2" /><path d="M16 11v-1a2 2 0 1 1 4 0v6" />
     </svg>;
 
+  const FacebookIcon = ({
+    className
+  }) => <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>;
+
   const socialLinks = [{
     icon: Instagram,
     label: "Instagram",
     url: "https://www.instagram.com/emprendiendo.juntas/",
     color: "text-[#E1306C]"
+  }, {
+    icon: FacebookIcon,
+    label: "Facebook",
+    url: "https://www.facebook.com/people/Emprendiendo-Juntas/100067189676481/",
+    color: "text-[#1877F2]"
   }, {
     icon: ThreadsIcon,
     label: "Threads",
@@ -96,6 +107,15 @@ const Contact = () => {
                 <Mail className="h-5 w-5 text-[#4CA7C0] flex-shrink-0 mt-0.5" />
                 <span className="text-gray-600 text-sm">info@emprendiendojuntas.com.co</span>
               </a>
+              <a
+                href="https://chat.whatsapp.com/H7tDkda2guM37g2o4GEEIr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start space-x-3 hover:opacity-75 transition-opacity"
+              >
+                <MessageCircle className="h-5 w-5 text-[#25D366] flex-shrink-0 mt-0.5" />
+                <span className="text-gray-600 text-sm">Únete al grupo — es gratis 💬</span>
+              </a>
             </div>
           </motion.div>
 
@@ -119,11 +139,23 @@ const Contact = () => {
               >
                 Sobre nosotras
               </Link>
+              <Link
+                to="/comunidad"
+                className="text-gray-600 text-sm hover:text-[#A169A2] transition-colors text-left font-medium"
+              >
+                Comunidad
+              </Link>
               <Link 
                 to="/blog"
                 className="text-gray-600 text-sm hover:text-[#A169A2] transition-colors text-left font-medium"
               >
                 Blog
+              </Link>
+              <Link
+                to="/membresia"
+                className="text-gray-600 text-sm hover:text-[#A169A2] transition-colors text-left font-medium"
+              >
+                Membresía
               </Link>
             </nav>
           </motion.div>

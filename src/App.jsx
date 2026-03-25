@@ -14,15 +14,20 @@ import Contact from '@/components/Contact';
 import AdminDashboard from '@/pages/AdminDashboard';
 import TestimoniosSection from '@/components/TestimoniosSection';
 import AboutUs from '@/pages/AboutUs';
+import Membresia from '@/pages/Membresia';
+import CarolinaSection from '@/components/CarolinaSection';
+import EmprendedorasGrid from '@/components/EmprendedorasGrid';
+import ComunidadPage from '@/pages/ComunidadPage';
 import Navbar from '@/components/Navbar';
 
 const HomePage = () => (
   <>
     <Hero />
-    {/* Using a modified section for homepage that links to full blog */}
-    <BlogPosts /> 
+    <CarolinaSection variant="compact" />
+    <EmprendedorasGrid />
     <Benefits />
     <TestimoniosSection />
+    <BlogPosts />
     <CTA />
     <Contact />
   </>
@@ -41,6 +46,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/nosotras" element={<AboutUs />} />
+          <Route path="/comunidad" element={<ComunidadPage />} />
+          <Route path="/membresia" element={<Membresia />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/admin" element={<AdminDashboard />} />

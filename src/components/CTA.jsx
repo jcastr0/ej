@@ -2,11 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 const CTA = () => {
-  const handleJoinClick = () => {
-    window.open('https://forms.gle/dWsJkrFRC5dkt6mF8', '_blank');
-  };
-  const features = ["Acceso a la comunidad privada", "Recursos descargables exclusivos", "Invitación a eventos y talleres", "Mentoría grupal mensual", "Red de apoyo 24/7"];
+  const features = ["Acceso a la comunidad privada", "Recursos descargables exclusivos", "Invitación a eventos y talleres", "Mentoría grupal mensual", "Planes desde $25.000 COP/mes"];
   return <section className="py-20 px-2 sm:px-4 bg-white">
     <div className="container px-2 mx-auto max-w-6xl">
         <motion.div initial={{
@@ -85,10 +83,12 @@ const CTA = () => {
               duration: 0.6,
               delay: 0.5
             }}>
-                <Button onClick={handleJoinClick} size="lg" className="bg-white text-[#A169A2] hover:bg-gray-100 px-8 py-6 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group">
-                  Únete ahora!
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to="/membresia">
+                  <Button size="lg" className="bg-white text-[#A169A2] hover:bg-gray-100 px-8 py-6 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                    Conoce nuestros planes
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </motion.div>
             </div>
 
@@ -109,8 +109,8 @@ const CTA = () => {
               </div>
 
               <div className="absolute -bottom-6 -right-6 bg-yellow-300 rounded-2xl p-6 shadow-xl">
-                <p className="text-3xl font-bold text-[#A169A2]">¡Gratis!</p>
-                <p className="text-sm text-gray-700 font-semibold">Sin costo de membresía</p>
+                <p className="text-3xl font-bold text-[#A169A2]">3 Planes</p>
+                <p className="text-sm text-gray-700 font-semibold">Desde $25.000/mes</p>
               </div>
             </motion.div>
           </div>

@@ -24,7 +24,7 @@ const BlogPosts = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span class="text-[#4CA7C0]">Nuestro</span> <span class="text-[#A169A2]">Blog</span>
+            <span className="text-[#4CA7C0]">Desde el blog:</span> <span className="text-[#A169A2]">aprende con nosotras</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
             Recursos, consejos y experiencias compartidas para impulsar tu crecimiento

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import MobileNav from '@/components/MobileNav';
 
 const Navbar = () => {
   return (
@@ -13,24 +14,36 @@ const Navbar = () => {
             className="h-10 w-auto"
           />
         </Link>
-        <div className="flex items-center gap-6">
+
+        {/* Desktop links */}
+        <div className="hidden lg:flex items-center gap-6">
           <Link to="/" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
             Inicio
           </Link>
           <Link to="/nosotras" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
-            Acerca de
+            Nosotras
+          </Link>
+          <Link to="/comunidad" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
+            Comunidad
           </Link>
           <Link to="/blog" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
             Blog
           </Link>
-          <Button 
-            variant="outline"
-            onClick={() => window.open('https://forms.gle/dWsJkrFRC5dkt6mF8', '_blank')}
-            className="hidden sm:flex border-[#A169A2] text-[#A169A2] hover:bg-[#A169A2] hover:text-white transition-all"
-          >
-            Únete
-          </Button>
+          <Link to="/membresia" className="text-sm font-medium text-gray-600 hover:text-[#A169A2] transition-colors">
+            Membresía
+          </Link>
+          <Link to="/membresia">
+            <Button
+              variant="outline"
+              className="border-[#A169A2] text-[#A169A2] hover:bg-[#A169A2] hover:text-white transition-all"
+            >
+              Únete
+            </Button>
+          </Link>
         </div>
+
+        {/* Mobile hamburger */}
+        <MobileNav />
       </div>
     </nav>
   );

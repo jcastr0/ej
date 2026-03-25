@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { formatDate, cn } from '@/lib/utils';
 import { CATEGORIES } from '@/data/categories';
 
 const BlogCard = ({ 
   post, 
-  showAuthor = false, 
-  showReadTime = false, 
+  showAuthor, // accepted for compatibility — author is now always shown
+  showReadTime = false,
   imageHeight = "h-64", 
   className = "",
   index = 0 
@@ -53,16 +53,16 @@ const BlogCard = ({
         
         {/* Meta Info */}
         <div className="flex items-center text-xs text-gray-500 mb-3 space-x-3">
+          {post.author && post.author.image && (
+            <img src={post.author.image} alt={post.author.name} className="w-6 h-6 rounded-full object-cover ring-1 ring-gray-200" />
+          )}
+          {post.author && (
+            <span className="font-medium text-gray-700">{post.author.name}</span>
+          )}
           <span className="flex items-center">
             <Calendar className="w-3.5 h-3.5 mr-1.5 text-[#A169A2]" /> 
             {formatDate(post.date)}
           </span>
-          {showAuthor && post.author && (
-            <span className="flex items-center">
-              <User className="w-3.5 h-3.5 mr-1.5 text-[#A169A2]" /> 
-              {post.author.name}
-            </span>
-          )}
         </div>
 
         {/* Title */}
