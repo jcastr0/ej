@@ -14,24 +14,24 @@ const CarolinaSection = ({ variant = 'compact' }) => {
 
 /* ───────────── Compact — Para el Home ───────────── */
 const CompactVariant = () => (
-  <section className="py-24 px-6">
+  <section className="py-16 sm:py-24 px-4 sm:px-6">
     <div className="container mx-auto max-w-6xl">
-      <div className="relative bg-[#19152A] rounded-[2rem] overflow-hidden">
-        <div className="grid md:grid-cols-5 min-h-[480px]">
+      <div className="relative bg-[#19152A] rounded-2xl sm:rounded-[2rem] overflow-hidden">
+        <div className="flex flex-col md:grid md:grid-cols-5 md:min-h-[480px]">
           {/* Image side */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="md:col-span-2 relative"
+            className="md:col-span-2 relative aspect-[4/3] md:aspect-auto"
           >
             <img
               src={CAROLINA_IMAGE}
               alt="Leidy Carolina Granados Celis"
-              className="w-full h-full object-cover min-h-[300px]"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#19152A]/40 hidden md:block" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#19152A]/60 md:bg-gradient-to-r md:from-transparent md:to-[#19152A]/40" />
           </motion.div>
 
           {/* Content side */}
@@ -40,24 +40,23 @@ const CompactVariant = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="md:col-span-3 p-10 md:p-14 flex flex-col justify-center space-y-6"
+            className="md:col-span-3 p-6 sm:p-10 md:p-14 flex flex-col justify-center space-y-4 sm:space-y-6"
           >
-            <span className="inline-block w-fit bg-[#A169A2]/20 text-[#A169A2] font-semibold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <span className="inline-block w-fit bg-[#A169A2]/20 text-[#A169A2] font-semibold text-[10px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Nuestra directora
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
               Leidy Carolina
               <br />
               <span className="text-[#4CA7C0] italic">Granados Celis</span>
             </h2>
-            <p className="text-white/70 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <p className="text-white/60 text-sm sm:text-base leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Contadora pública y estudiante de Comunicación Social. Tomó las riendas de Emprendiendo Juntas
-              cuando las fundadoras originales pasaron a nuevas etapas, y desde entonces lidera la estrategia,
-              el contenido, la comunidad y las formaciones.
+              cuando las fundadoras originales pasaron a nuevas etapas.
             </p>
 
-            <blockquote className="border-l-2 border-[#A169A2] pl-5 py-1">
-              <p className="text-white/90 italic text-lg">
+            <blockquote className="border-l-2 border-[#A169A2] pl-4 py-1">
+              <p className="text-white/80 italic text-sm sm:text-lg leading-relaxed">
                 "El crecimiento empresarial también requiere comunidad, orientación y contención humana."
               </p>
             </blockquote>
@@ -65,7 +64,7 @@ const CompactVariant = () => (
             <Link to="/nosotras">
               <Button
                 variant="ghost"
-                className="text-[#4CA7C0] hover:text-white hover:bg-[#4CA7C0]/10 rounded-full px-0 group"
+                className="text-[#4CA7C0] hover:text-white hover:bg-[#4CA7C0]/10 rounded-full px-0 group text-sm"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 Conoce nuestra historia
