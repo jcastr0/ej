@@ -41,7 +41,7 @@ function App() {
         <meta name="description" content="Únete a Emprendiendo Juntas, la comunidad de emprendedoras en Santa Marta, Colombia. Crece tu negocio con el apoyo de otras mujeres. Aquí no estás sola en este camino." />
       </Helmet>
       
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />

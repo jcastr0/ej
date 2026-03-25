@@ -34,11 +34,10 @@ const BlogPosts = () => {
           </Link>
         </motion.div>
 
-        {/* Horizontal scroll breakout */}
-        <div className="-mx-5 px-5 sm:mx-0 sm:px-0">
-          <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 sm:overflow-visible sm:pb-0">
+        {/* Horizontal scroll on mobile, grid on desktop */}
+        <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 sm:overflow-visible sm:pb-0">
             {recentPosts.map((post, index) => (
-              <div key={post.id} className="flex-shrink-0 w-[78%] sm:w-auto snap-start first:ml-5 last:mr-5 sm:first:ml-0 sm:last:mr-0">
+              <div key={post.id} className="flex-shrink-0 w-[78%] sm:w-auto snap-start">
                 <BlogCard
                   post={post}
                   index={index}
@@ -48,7 +47,6 @@ const BlogPosts = () => {
                 />
               </div>
             ))}
-          </div>
         </div>
       </div>
     </section>

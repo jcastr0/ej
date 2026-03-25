@@ -29,9 +29,8 @@ const EmprendedorasGrid = ({ limit = 4, showCTA = true }) => {
           </p>
         </motion.div>
 
-        {/* Horizontal scroll breaks out of padding */}
-        <div className="-mx-5 px-5 sm:mx-0 sm:px-0">
-          <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 sm:overflow-visible sm:pb-0">
+        {/* Horizontal scroll on mobile, grid on desktop */}
+        <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-5 sm:overflow-visible sm:pb-0">
             {items.map((item, i) => (
               <motion.div
                 key={item.id}
@@ -39,7 +38,7 @@ const EmprendedorasGrid = ({ limit = 4, showCTA = true }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="group flex-shrink-0 w-[70%] sm:w-auto snap-start bg-white rounded-2xl p-5 sm:p-6 text-center shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-[#A169A2]/20 first:ml-5 last:mr-5 sm:first:ml-0 sm:last:mr-0"
+                className="group flex-shrink-0 w-[70%] sm:w-auto snap-start bg-white rounded-2xl p-5 sm:p-6 text-center shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-[#A169A2]/20"
               >
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 overflow-hidden ring-2 ring-[#F5EEF8] group-hover:ring-[#A169A2]/30 transition-all">
                   <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
@@ -74,7 +73,6 @@ const EmprendedorasGrid = ({ limit = 4, showCTA = true }) => {
               </motion.div>
             ))}
           </div>
-        </div>
 
         {showCTA && (
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-8 sm:mt-14">

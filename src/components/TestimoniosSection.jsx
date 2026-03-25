@@ -11,12 +11,11 @@ const TestimoniosSection = () => (
         <h2 className="text-3xl sm:text-5xl font-bold text-[#19152A]">Lo que dicen <span className="italic text-[#4CA7C0]">ellas</span></h2>
       </motion.div>
 
-      {/* Horizontal scroll breakout */}
-      <div className="-mx-5 px-5 sm:mx-0 sm:px-0">
-        <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 sm:overflow-visible sm:pb-0">
+      {/* Horizontal scroll on mobile, grid on desktop */}
+      <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 sm:overflow-visible sm:pb-0">
           {testimonios.map((t, i) => (
             <motion.div key={t.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex-shrink-0 w-[75%] sm:w-auto snap-start bg-white rounded-2xl p-5 sm:p-7 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col first:ml-5 last:mr-5 sm:first:ml-0 sm:last:mr-0">
+              className="flex-shrink-0 w-[75%] sm:w-auto snap-start bg-white rounded-2xl p-5 sm:p-7 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
               <Quote className="w-5 h-5 text-[#A169A2]/30 mb-3 flex-shrink-0" />
               <p className="text-[#48405E] text-sm sm:text-base italic leading-relaxed mb-5 flex-grow" style={{ fontFamily: "'DM Sans', sans-serif" }}>"{t.quote}"</p>
               <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
@@ -33,7 +32,6 @@ const TestimoniosSection = () => (
           ))}
         </div>
       </div>
-    </div>
   </section>
 );
 
