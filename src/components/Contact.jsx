@@ -56,9 +56,9 @@ const Contact = () => {
     color: "text-black"
   }];
 
-  return <footer className="bg-purple-50 border-t border-purple-100 text-gray-900 py-12 px-4">
-    <div className="container px-4 mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+  return <footer className="bg-[#19152A] text-white py-10 sm:py-14 px-4">
+    <div className="sm:container sm:mx-auto sm:max-w-7xl">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           <motion.div initial={{
           opacity: 0,
           y: 30
@@ -70,10 +70,9 @@ const Contact = () => {
         }} transition={{
           duration: 0.6
         }} className="space-y-4">
-            <img src="/images/logo_ej.svg" alt="Emprendiendo Juntas logo" className="h-14 w-auto" />
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Comunidad de mujeres emprendedoras en Santa Marta, Colombia. 
-              Crecemos juntas, apoyándonos mutuamente en cada paso del camino.
+            <img src="/images/logo_ej.svg" alt="Emprendiendo Juntas logo" className="h-12 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
+            <p className="text-white/50 text-xs sm:text-sm leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Comunidad de mujeres emprendedoras en Santa Marta, Colombia.
             </p>
           </motion.div>
 
@@ -89,7 +88,7 @@ const Contact = () => {
           duration: 0.6,
           delay: 0.1
         }} className="space-y-3">
-            <h3 className="text-lg font-bold text-[#A169A2]">Contacto</h3>
+            <h3 className="text-sm sm:text-lg font-bold text-[#4CA7C0]">Contacto</h3>
             <div className="space-y-3">
               <a 
                 href="https://www.google.com/maps/place/Santa+Marta,+Colombia" 

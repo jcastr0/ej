@@ -49,31 +49,31 @@ const BlogCard = ({
       </div>
 
       {/* Content Section */}
-      <div className="p-6 flex flex-col flex-grow">
-        
+      <div className="p-4 sm:p-6 flex flex-col flex-grow">
+
         {/* Meta Info */}
-        <div className="flex items-center text-xs text-gray-500 mb-3 space-x-3">
+        <div className="flex items-center text-[11px] sm:text-xs text-gray-500 mb-2 sm:mb-3 space-x-2 sm:space-x-3">
           {post.author && post.author.image && (
-            <img src={post.author.image} alt={post.author.name} className="w-6 h-6 rounded-full object-cover ring-1 ring-gray-200" />
+            <img src={post.author.image} alt={post.author.name} className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover ring-1 ring-gray-200" />
           )}
           {post.author && (
-            <span className="font-medium text-gray-700">{post.author.name}</span>
+            <span className="font-medium text-gray-700 truncate">{post.author.name}</span>
           )}
-          <span className="flex items-center">
-            <Calendar className="w-3.5 h-3.5 mr-1.5 text-[#A169A2]" /> 
+          <span className="flex items-center flex-shrink-0">
+            <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1 text-[#A169A2]" />
             {formatDate(post.date)}
           </span>
         </div>
 
         {/* Title */}
-        <Link to={`/blog/${post.slug}`} className="block mb-2">
-          <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#A169A2] transition-colors duration-300 line-clamp-2 leading-tight">
+        <Link to={`/blog/${post.slug}`} className="block mb-1.5 sm:mb-2">
+          <h3 className="text-base sm:text-xl font-bold text-gray-900 group-hover:text-[#A169A2] transition-colors duration-300 line-clamp-2 leading-snug">
             {post.title}
           </h3>
         </Link>
 
         {/* Excerpt */}
-        <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4 flex-grow">
+        <p className="text-gray-500 text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-3 mb-3 sm:mb-4 flex-grow" style={{ fontFamily: "'DM Sans', sans-serif" }}>
           {post.excerpt}
         </p>
 

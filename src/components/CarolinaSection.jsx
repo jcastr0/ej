@@ -14,61 +14,45 @@ const CarolinaSection = ({ variant = 'compact' }) => {
 
 /* ───────────── Compact — Para el Home ───────────── */
 const CompactVariant = () => (
-  <section className="py-16 sm:py-24 px-4 sm:px-6">
-    <div className="container mx-auto max-w-6xl">
-      <div className="relative bg-[#19152A] rounded-2xl sm:rounded-[2rem] overflow-hidden">
+  <section className="py-10 sm:py-24 px-0 sm:px-6">
+    <div className="sm:container sm:mx-auto sm:max-w-6xl">
+      <div className="relative bg-[#19152A] sm:rounded-[2rem] overflow-hidden">
         <div className="flex flex-col md:grid md:grid-cols-5 md:min-h-[480px]">
-          {/* Image side */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="md:col-span-2 relative aspect-[4/3] md:aspect-auto"
+            className="md:col-span-2 relative aspect-[3/2] md:aspect-auto"
           >
-            <img
-              src={CAROLINA_IMAGE}
-              alt="Leidy Carolina Granados Celis"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#19152A]/60 md:bg-gradient-to-r md:from-transparent md:to-[#19152A]/40" />
+            <img src={CAROLINA_IMAGE} alt="Leidy Carolina Granados Celis" className="w-full h-full object-cover object-top" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#19152A]/70 md:bg-gradient-to-r md:from-transparent md:to-[#19152A]/40" />
           </motion.div>
 
-          {/* Content side */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="md:col-span-3 p-6 sm:p-10 md:p-14 flex flex-col justify-center space-y-4 sm:space-y-6"
+            className="md:col-span-3 px-5 py-6 sm:p-10 md:p-14 flex flex-col justify-center space-y-3 sm:space-y-5"
           >
-            <span className="inline-block w-fit bg-[#A169A2]/20 text-[#A169A2] font-semibold text-[10px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <span className="inline-block w-fit bg-[#A169A2]/20 text-[#A169A2] font-semibold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Nuestra directora
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
-              Leidy Carolina
-              <br />
-              <span className="text-[#4CA7C0] italic">Granados Celis</span>
+            <h2 className="text-2xl sm:text-4xl font-bold text-white leading-tight">
+              Leidy Carolina<br /><span className="text-[#4CA7C0] italic">Granados Celis</span>
             </h2>
-            <p className="text-white/60 text-sm sm:text-base leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              Contadora pública y estudiante de Comunicación Social. Tomó las riendas de Emprendiendo Juntas
-              cuando las fundadoras originales pasaron a nuevas etapas.
+            <p className="text-white/55 text-sm leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Contadora pública y estudiante de Comunicación Social. Lidera la estrategia, el contenido, la comunidad y las formaciones.
             </p>
-
-            <blockquote className="border-l-2 border-[#A169A2] pl-4 py-1">
-              <p className="text-white/80 italic text-sm sm:text-lg leading-relaxed">
+            <blockquote className="border-l-2 border-[#A169A2] pl-4">
+              <p className="text-white/75 italic text-sm sm:text-lg leading-relaxed">
                 "El crecimiento empresarial también requiere comunidad, orientación y contención humana."
               </p>
             </blockquote>
-
             <Link to="/nosotras">
-              <Button
-                variant="ghost"
-                className="text-[#4CA7C0] hover:text-white hover:bg-[#4CA7C0]/10 rounded-full px-0 group text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                Conoce nuestra historia
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <Button variant="ghost" className="text-[#4CA7C0] hover:text-white hover:bg-[#4CA7C0]/10 rounded-full px-0 group text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                Conoce nuestra historia <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </motion.div>

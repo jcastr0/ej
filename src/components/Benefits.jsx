@@ -14,49 +14,49 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-[#19152A]">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-12 sm:py-24 px-3 sm:px-6 bg-[#19152A]">
+      <div className="sm:container sm:mx-auto sm:max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <span className="inline-block bg-white/10 text-white/70 font-semibold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <span className="inline-block bg-white/10 text-white/60 font-semibold text-[10px] sm:text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             Beneficios
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
             ¿Qué encontrarás <span className="italic text-[#4CA7C0]">aquí?</span>
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          <p className="text-sm sm:text-lg text-white/50 max-w-xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             Emprender no tiene que ser un camino solitario.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
           {benefits.map((b, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-all duration-500"
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              className="group bg-white/5 border border-white/8 rounded-xl p-3.5 sm:p-7 hover:bg-white/10 transition-all duration-500"
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5"
                 style={{ backgroundColor: b.color + '20' }}
               >
-                <b.icon className="w-6 h-6" style={{ color: b.color }} />
+                <b.icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: b.color }} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">{b.title}</h3>
-              <p className="text-white/60 text-sm leading-relaxed mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <h3 className="text-sm sm:text-xl font-bold text-white mb-1 sm:mb-2">{b.title}</h3>
+              <p className="text-white/50 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-4 line-clamp-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 {b.description}
               </p>
               <Link
                 to="/membresia"
-                className="text-xs font-semibold tracking-wide uppercase"
+                className="text-[10px] sm:text-xs font-semibold tracking-wide uppercase"
                 style={{ color: b.color, fontFamily: "'DM Sans', sans-serif" }}
               >
                 {b.plan} →
