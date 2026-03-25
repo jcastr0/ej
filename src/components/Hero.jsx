@@ -1,109 +1,108 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import StatsBar from '@/components/StatsBar';
 
 const Hero = () => {
   return (
-    <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-2 sm:px-4 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#A169A2]/10 via-transparent to-[#4CA7C0]/10" />
+    <section className="relative min-h-screen flex items-end overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/empre_juntas.webp"
+          alt="Emprendiendo Juntas"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#19152A] via-[#19152A]/60 to-[#19152A]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#A169A2]/30 to-transparent" />
+      </div>
 
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Content */}
+      <div className="relative z-10 container mx-auto max-w-7xl px-6 pb-20 pt-40">
+        <div className="max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="space-y-8"
+          >
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="space-y-8"
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2"
             >
-              <div className="inline-block">
-                <img
-                  src="/images/logo_ej.png"
-                  alt="Emprendiendo Juntas - Comunidad de emprendedoras en Santa Marta"
-                  className="h-24 w-auto"
-                />
-              </div>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#19152A] leading-tight">
-                <span className="text-[#4CA7C0]">60 mujeres </span>
-                <span className="text-[#A169A2]">emprendiendo juntas.</span>
-                <br />
-                <span className="text-[#19152A]">¿Te sumas?</span>
-              </h1>
-
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                5 años construyendo comunidad en Santa Marta. Formación, mentoría y una red que impulsa tu negocio de verdad.
-              </p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="flex flex-wrap gap-4"
-              >
-                <Link to="/comunidad">
-                  <Button
-                    size="lg"
-                    className="bg-[#A169A2] hover:bg-[#8d5a8e] text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  >
-                    Conoce a la comunidad
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-
-                <Link to="/membresia">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-[#4CA7C0] text-[#4CA7C0] hover:bg-[#4CA7C0] hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-                  >
-                    Ver planes de membresía
-                  </Button>
-                </Link>
-              </motion.div>
+              <span className="w-2 h-2 bg-[#4CA7C0] rounded-full animate-pulse" />
+              <span className="text-white/90 text-sm font-medium tracking-wide">5 años de comunidad · 60+ emprendedoras</span>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  alt="Mujeres emprendedoras trabajando juntas en Santa Marta"
-                  className="w-full h-[500px] object-cover"
-                  src="/images/empre_juntas.webp"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#A169A2]/20 to-transparent" />
-              </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+              Tu emprendimiento
+              <br />
+              <span className="italic text-[#4CA7C0]">no tiene que</span>
+              <br />
+              <span className="italic text-[#4CA7C0]">crecer solo.</span>
+            </h1>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs"
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="bg-[#4CA7C0] rounded-full p-3">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-gray-900">60+</p>
-                    <p className="text-sm text-gray-600">Emprendedoras activas</p>
-                  </div>
-                </div>
-              </motion.div>
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Formación, mentoría y una red real de mujeres que impulsa tu negocio.
+              Desde Santa Marta para Colombia y el mundo.
+            </p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="flex flex-wrap gap-4 pt-2"
+            >
+              <Link to="/membresia">
+                <Button
+                  size="lg"
+                  className="bg-[#A169A2] hover:bg-[#8d5a8e] text-white px-8 py-6 text-lg font-semibold rounded-full shadow-2xl hover:shadow-[#A169A2]/25 transition-all duration-300 group"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  Conoce los planes
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+
+              <Link to="/nosotras">
+                <Button
+                  variant="ghost"
+                  size="lg"
+                  className="text-white/90 hover:text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 group border border-white/20"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  <Play className="mr-2 h-5 w-5" />
+                  Nuestra historia
+                </Button>
+              </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-      </section>
 
-      <StatsBar variant="light" />
-    </>
+        {/* Stats strip at bottom */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4"
+        >
+          {[
+            { value: '5+', label: 'Años' },
+            { value: '60+', label: 'Emprendedoras' },
+            { value: '6', label: 'Ciudades' },
+            { value: '100%', label: 'Acompañamiento' },
+          ].map((stat, i) => (
+            <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-5 py-4 text-center">
+              <p className="text-2xl md:text-3xl font-bold text-white">{stat.value}</p>
+              <p className="text-white/60 text-sm mt-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

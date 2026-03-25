@@ -14,61 +14,66 @@ const CarolinaSection = ({ variant = 'compact' }) => {
 
 /* ───────────── Compact — Para el Home ───────────── */
 const CompactVariant = () => (
-  <section className="py-20 px-4 bg-[#F5EEF8]/60">
+  <section className="py-24 px-6">
     <div className="container mx-auto max-w-6xl">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="relative"
-        >
-          <div className="absolute -inset-3 bg-gradient-to-br from-[#A169A2]/20 to-[#4CA7C0]/20 rounded-3xl blur-xl" />
-          <img
-            src={CAROLINA_IMAGE}
-            alt="Leidy Carolina Granados Celis — Directora de Emprendiendo Juntas"
-            className="relative rounded-3xl shadow-2xl w-full h-[420px] object-cover"
-          />
-        </motion.div>
+      <div className="relative bg-[#19152A] rounded-[2rem] overflow-hidden">
+        <div className="grid md:grid-cols-5 min-h-[480px]">
+          {/* Image side */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="md:col-span-2 relative"
+          >
+            <img
+              src={CAROLINA_IMAGE}
+              alt="Leidy Carolina Granados Celis"
+              className="w-full h-full object-cover min-h-[300px]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#19152A]/40 hidden md:block" />
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="space-y-5"
-        >
-          <span className="inline-block bg-[#A169A2]/10 text-[#A169A2] font-semibold text-sm px-4 py-1.5 rounded-full">
-            Nuestra directora
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Leidy Carolina{' '}
-            <span className="text-[#A169A2]">Granados Celis</span>
-          </h2>
-          <p className="text-gray-600 leading-relaxed">
-            Contadora pública y estudiante de Comunicación Social. Tomó las riendas de Emprendiendo Juntas
-            cuando las fundadoras originales pasaron a nuevas etapas, y desde entonces lidera la estrategia,
-            el contenido, la comunidad y las formaciones.
-          </p>
-
-          <div className="bg-white rounded-2xl p-5 border border-purple-100 shadow-sm">
-            <Quote className="w-6 h-6 text-[#A169A2] mb-2" />
-            <p className="text-gray-700 italic leading-relaxed">
-              "El crecimiento empresarial también requiere comunidad, orientación y contención humana."
+          {/* Content side */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="md:col-span-3 p-10 md:p-14 flex flex-col justify-center space-y-6"
+          >
+            <span className="inline-block w-fit bg-[#A169A2]/20 text-[#A169A2] font-semibold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Nuestra directora
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+              Leidy Carolina
+              <br />
+              <span className="text-[#4CA7C0] italic">Granados Celis</span>
+            </h2>
+            <p className="text-white/70 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Contadora pública y estudiante de Comunicación Social. Tomó las riendas de Emprendiendo Juntas
+              cuando las fundadoras originales pasaron a nuevas etapas, y desde entonces lidera la estrategia,
+              el contenido, la comunidad y las formaciones.
             </p>
-          </div>
 
-          <Link to="/nosotras">
-            <Button
-              variant="outline"
-              className="border-[#A169A2] text-[#A169A2] hover:bg-[#A169A2] hover:text-white rounded-full px-6 mt-2 group"
-            >
-              Conoce nuestra historia
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </motion.div>
+            <blockquote className="border-l-2 border-[#A169A2] pl-5 py-1">
+              <p className="text-white/90 italic text-lg">
+                "El crecimiento empresarial también requiere comunidad, orientación y contención humana."
+              </p>
+            </blockquote>
+
+            <Link to="/nosotras">
+              <Button
+                variant="ghost"
+                className="text-[#4CA7C0] hover:text-white hover:bg-[#4CA7C0]/10 rounded-full px-0 group"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Conoce nuestra historia
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </div>
   </section>
