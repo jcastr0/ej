@@ -108,7 +108,7 @@ const LaPerfeccionContent = () => {
           <div className="w-full md:w-[380px] flex-shrink-0">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/logo_ej-K18L6.png"
+                src="/images/logo_ej.png"
                 alt="emprendiendo.juntas"
                 className="w-10 h-10 rounded-full object-cover"
               />

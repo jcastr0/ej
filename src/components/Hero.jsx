@@ -21,7 +21,7 @@ const Hero = () => {
             >
               <div className="inline-block">
                 <img
-                  src="https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/logo_ej-K18L6.png"
+                  src="/images/logo_ej.png"
                   alt="Emprendiendo Juntas - Comunidad de emprendedoras en Santa Marta"
                   className="h-24 w-auto"
                 />
@@ -76,7 +76,7 @@ const Hero = () => {
                 <img
                   alt="Mujeres emprendedoras trabajando juntas en Santa Marta"
                   className="w-full h-[500px] object-cover"
-                  src="https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/empre_juntas-UPvCI.webp"
+                  src="/images/empre_juntas.webp"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#A169A2]/20 to-transparent" />
               </div>

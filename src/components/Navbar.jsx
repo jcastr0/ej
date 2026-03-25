@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container mx-auto max-w-7xl flex items-center justify-between">
         <Link to="/" className="flex-shrink-0">
           <img 
-            src="https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/logo_ej-K18L6.png" 
+            src="/images/logo_ej.png" 
             alt="Emprendiendo Juntas" 
             className="h-10 w-auto"
           />

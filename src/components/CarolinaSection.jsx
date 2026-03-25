@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const CAROLINA_IMAGE =
-  'https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/b09b90f2584b8df9d5dc7bc9a400ac9a.jpg';
+  '/images/carolina_granados.jpg';
 
 const CarolinaSection = ({ variant = 'compact' }) => {
   if (variant === 'full') return <FullVariant />;

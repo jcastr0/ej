@@ -105,7 +105,7 @@ const CTA = () => {
             delay: 0.3
           }} className="relative hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img alt="Emprendedoras celebrando juntas el éxito de sus negocios" className="w-full h-[400px] object-cover" src="https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/img_0419-MhleE.jpeg" />
+                <img alt="Emprendedoras celebrando juntas el éxito de sus negocios" className="w-full h-[400px] object-cover" src="/images/cta_grupo.jpeg" />
               </div>
 
               <div className="absolute -bottom-6 -right-6 bg-yellow-300 rounded-2xl p-6 shadow-xl">

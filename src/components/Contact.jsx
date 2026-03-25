@@ -70,7 +70,7 @@ const Contact = () => {
         }} transition={{
           duration: 0.6
         }} className="space-y-4">
-            <img src="https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/logo_ej-K18L6.png" alt="Emprendiendo Juntas logo" className="h-14 w-auto" />
+            <img src="/images/logo_ej.png" alt="Emprendiendo Juntas logo" className="h-14 w-auto" />
             <p className="text-gray-600 text-sm leading-relaxed">
               Comunidad de mujeres emprendedoras en Santa Marta, Colombia. 
               Crecemos juntas, apoyándonos mutuamente en cada paso del camino.

@@ -35,7 +35,7 @@ const AdminDashboard = () => {
       author: {
         name: formData.authorName,
         role: 'Editor',
-        image: 'https://horizons-cdn.hostinger.com/44782cdd-45ed-40ed-9124-e0edcb8986e7/logo_ej-K18L6.png'
+        image: '/images/logo_ej.png'
       }
     };
 
