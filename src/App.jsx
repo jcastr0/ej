@@ -19,6 +19,7 @@ import CarolinaSection from '@/components/CarolinaSection';
 import EmprendedorasGrid from '@/components/EmprendedorasGrid';
 import ComunidadPage from '@/pages/ComunidadPage';
 import MapaEmpatia from '@/pages/MapaEmpatia';
+import Portafolio from '@/pages/Portafolio';
 import Navbar from '@/components/Navbar';
 
 const HomePage = () => (
@@ -52,6 +53,7 @@ function App() {
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/mapa-empatia" element={<MapaEmpatia />} />
+          <Route path="/portafolio" element={<Portafolio />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Toaster />
