@@ -239,6 +239,73 @@ const ValuePropositionCanvas = () => {
           esperadas por las emprendedoras. Haz clic en cada sección para explorar los detalles.
         </p>
 
+        {/* Propuesta de Valor - Tres Pilares */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="bg-gradient-to-r from-[#A169A2] to-[#4CA7C0] rounded-2xl p-8 mb-8 text-white relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-10 translate-x-10" />
+          <div className="absolute bottom-0 left-1/4 w-24 h-24 bg-white/5 rounded-full translate-y-6" />
+
+          <div className="relative">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                Propuesta de Valor Diferenciada
+              </h2>
+              <p className="text-white/80 text-sm max-w-2xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                Tres pilares fundamentales que responden directamente a las necesidades de nuestras emprendedoras
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">🤝 Comunidad</h3>
+                <p className="text-white/80 text-sm leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                  Red de apoyo activa donde las emprendedoras comparten experiencias, se motivan mutuamente y construyen vínculos de confianza.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <Package className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">📚 Formación</h3>
+                <p className="text-white/80 text-sm leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                  Capacitación práctica en costos, marketing, marca, ventas, servicio al cliente y comunicación.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">📣 Visibilidad</h3>
+                <p className="text-white/80 text-sm leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                  Amplificación de marcas a través de redes sociales, web, eventos presenciales y alianzas estratégicas.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
+              <h4 className="font-bold text-center mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                Declaración de Propuesta de Valor
+              </h4>
+              <p className="text-white/90 text-sm leading-relaxed text-center max-w-4xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                Para <strong>mujeres emprendedoras de Santa Marta y el Caribe colombiano</strong> que necesitan visibilidad,
+                formación y acompañamiento para sostener sus negocios, <strong>Emprendiendo Juntas</strong> es una comunidad
+                híbrida de apoyo integral que ofrece cercanía humana, orientación estratégica y proyección de marca.
+                A diferencia de programas institucionales o comunidades exclusivamente digitales,
+                <strong> Emprendiendo Juntas combina lo emocional, lo contable, lo comunicativo y lo presencial</strong> en un solo espacio accesible.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         <div className="flex items-center justify-center gap-4 mb-8">
           <button
             onClick={() => setShowGuide(!showGuide)}
