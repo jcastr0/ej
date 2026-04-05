@@ -22,6 +22,7 @@ import MapaEmpatia from '@/pages/MapaEmpatia';
 import Portafolio from '@/pages/Portafolio';
 import ArbolProblemas from '@/pages/ArbolProblemas';
 import BusinessModelCanvas from '@/pages/BusinessModelCanvas';
+import ValuePropositionCanvas from '@/pages/ValuePropositionCanvas';
 import Navbar from '@/components/Navbar';
 
 const HomePage = () => (
@@ -58,6 +59,7 @@ function App() {
           <Route path="/portafolio" element={<Portafolio />} />
           <Route path="/arbol-problemas" element={<ArbolProblemas />} />
           <Route path="/business-model-canvas" element={<BusinessModelCanvas />} />
+          <Route path="/value-proposition-canvas" element={<ValuePropositionCanvas />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Toaster />
