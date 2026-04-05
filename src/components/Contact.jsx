@@ -57,7 +57,7 @@ const Contact = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="space-y-3">
             <h3 className="text-sm font-bold text-[#4CA7C0] uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>Navegación</h3>
             <nav className="flex flex-col space-y-2">
-              {[{ to: '/nosotras', label: 'Nosotras' }, { to: '/comunidad', label: 'Comunidad' }, { to: '/blog', label: 'Blog' }, { to: '/membresia', label: 'Membresía' }, { to: '/portafolio', label: 'Portafolio' }, { to: '/mapa-empatia', label: 'Mapa de Empatía' }, { to: '/arbol-problemas', label: 'Árbol de Problemas' }].map(link => (
+              {[{ to: '/nosotras', label: 'Nosotras' }, { to: '/comunidad', label: 'Comunidad' }, { to: '/blog', label: 'Blog' }, { to: '/membresia', label: 'Membresía' }, { to: '/portafolio', label: 'Portafolio' }, { to: '/business-model-canvas', label: 'Business Model Canvas' }, { to: '/mapa-empatia', label: 'Mapa de Empatía' }, { to: '/arbol-problemas', label: 'Árbol de Problemas' }].map(link => (
                 <Link key={link.to} to={link.to} className="text-white/50 text-sm hover:text-[#A169A2] transition-colors" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   {link.label}
                 </Link>

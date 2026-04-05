@@ -21,6 +21,7 @@ import ComunidadPage from '@/pages/ComunidadPage';
 import MapaEmpatia from '@/pages/MapaEmpatia';
 import Portafolio from '@/pages/Portafolio';
 import ArbolProblemas from '@/pages/ArbolProblemas';
+import BusinessModelCanvas from '@/pages/BusinessModelCanvas';
 import Navbar from '@/components/Navbar';
 
 const HomePage = () => (
@@ -56,6 +57,7 @@ function App() {
           <Route path="/mapa-empatia" element={<MapaEmpatia />} />
           <Route path="/portafolio" element={<Portafolio />} />
           <Route path="/arbol-problemas" element={<ArbolProblemas />} />
+          <Route path="/business-model-canvas" element={<BusinessModelCanvas />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Toaster />
