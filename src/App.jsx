@@ -20,6 +20,7 @@ import EmprendedorasGrid from '@/components/EmprendedorasGrid';
 import ComunidadPage from '@/pages/ComunidadPage';
 import MapaEmpatia from '@/pages/MapaEmpatia';
 import Portafolio from '@/pages/Portafolio';
+import ArbolProblemas from '@/pages/ArbolProblemas';
 import Navbar from '@/components/Navbar';
 
 const HomePage = () => (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/mapa-empatia" element={<MapaEmpatia />} />
           <Route path="/portafolio" element={<Portafolio />} />
+          <Route path="/arbol-problemas" element={<ArbolProblemas />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Toaster />
