@@ -10,55 +10,56 @@ const plans = [
     name: 'Semilla',
     emoji: '🌱',
     icon: Sprout,
-    price: '25.000',
+    price: 'Gratuito',
+    originalPrice: null,
     color: '#4CA7C0',
-    description: 'Para emprendedoras que están comenzando y quieren dar sus primeros pasos con apoyo.',
-    ideal: 'Emprendedoras en etapa inicial, que tienen un producto o servicio pero necesitan claridad, comunidad y herramientas para avanzar.',
+    description: 'Para emprendedoras que están comenzando su camino y buscan comunidad de apoyo.',
+    ideal: 'Emprendedoras en etapa inicial que tienen un producto o servicio pero necesitan claridad, comunidad y primeros pasos.',
     features: [
-      'Acceso a la comunidad cerrada de WhatsApp de emprendedoras activas',
-      '1 taller grupal mensual (virtual) sobre marca, comunicación o ventas',
-      'Biblioteca de recursos descargables (guías, plantillas, checklists)',
-      'Visibilidad básica: presentación en redes 1 vez al mes',
-      'Acceso al directorio privado de emprendedoras (networking)',
+      'Acceso al grupo general de WhatsApp',
+      'Publicaciones educativas en redes sociales',
+      'Talleres abiertos ocasionales',
+      'Menciones en la comunidad',
+      'Acceso a eventos abiertos'
     ],
+    validation: 'Base actual: ~60 emprendedoras activas demuestran el valor de la comunidad gratuita'
   },
   {
     name: 'Raíces',
     emoji: '🌿',
     icon: Leaf,
-    price: '55.000',
+    price: '49.900',
+    originalPrice: null,
     color: '#A169A2',
     popular: true,
-    description: 'Para emprendedoras que ya tienen su negocio activo y quieren crecer con estrategia.',
-    ideal: 'Emprendedoras con negocios activos que quieren escalar su visibilidad, mejorar su estrategia y acceder a mentoría real.',
+    description: 'Para emprendedoras que quieren estructurar su crecimiento con acompañamiento.',
+    ideal: 'Emprendedoras con negocios activos que buscan formación sistemática y mayor visibilidad.',
     features: [
-      'Todo lo del Plan Semilla',
-      '1 sesión mensual de mentoría grupal en vivo (máx. 10 personas)',
-      'Acceso anticipado a talleres y eventos especiales',
-      'Visibilidad ampliada: 2 publicaciones al mes en redes',
-      'Descuento del 20% en talleres individuales o mentorías 1 a 1',
-      'Participación en encuentros presenciales en Santa Marta',
-      'Hoja de ruta personalizada al ingresar',
+      'Grupo general + canal VIP en WhatsApp',
+      'Publicaciones en redes + guías descargables',
+      '1 taller mensual grupal',
+      '1 feature mensual en redes sociales',
+      'Eventos exclusivos trimestrales'
     ],
+    validation: 'Conversión estimada del 20% = ~$599.000/mes de ingresos base'
   },
   {
     name: 'Florecer',
     emoji: '🌸',
     icon: Flower2,
-    price: '110.000',
-    color: '#A169A2',
-    description: 'Para emprendedoras comprometidas que quieren acompañamiento profundo y diferenciado.',
-    ideal: 'Emprendedoras que quieren ser vistas, que buscan crecer con acompañamiento real y que están listas para invertir en su negocio.',
+    price: '99.900',
+    originalPrice: null,
+    color: '#C49A2B',
+    description: 'Para emprendedoras comprometidas que buscan acompañamiento profundo y personalizado.',
+    ideal: 'Emprendedoras que quieren ser vistas y están listas para invertir en acompañamiento 1:1.',
     features: [
-      'Todo lo del Plan Raíces',
-      '1 sesión de mentoría 1 a 1 mensual (45 min, virtual o presencial)',
-      'Análisis mensual de tu presencia digital con recomendaciones',
-      'Visibilidad premium: 4+ publicaciones al mes + story destacado',
-      'Acceso a todos los talleres del mes sin costo adicional',
-      'Co-creación de contenido para tu marca (1 pieza al mes)',
-      'Badge oficial "Miembro Emprendiendo Juntas"',
-      'Acceso prioritario a alianzas y oportunidades de negocio',
+      'General + VIP + directorio privado en WhatsApp',
+      'Guías descargables + masterclasses exclusivas',
+      'Talleres grupales + 1 mentoría 1:1 mensual',
+      'Feature en web + redes + eventos',
+      'Acceso prioritario a aliados y ferias'
     ],
+    validation: 'Retroalimentación: alta demanda por mentorías personalizadas'
   },
 ];
 
@@ -110,14 +111,24 @@ const PlanCard = ({ plan, index }) => (
     </div>
 
     <div className="text-center mb-6">
-      <div className="flex items-baseline justify-center gap-1">
-        <span className="text-lg text-gray-500">$</span>
-        <span className="text-5xl font-extrabold text-gray-900">{plan.price}</span>
-      </div>
-      <span className="text-gray-500 text-sm">COP / mes</span>
+      {plan.price === 'Gratuito' ? (
+        <div>
+          <span className="text-5xl font-extrabold text-[#4CA7C0]">Gratuito</span>
+          <div className="text-gray-500 text-sm mt-1">Siempre</div>
+        </div>
+      ) : (
+        <div className="flex items-baseline justify-center gap-1">
+          <span className="text-lg text-gray-500">$</span>
+          <span className="text-5xl font-extrabold text-gray-900">{plan.price}</span>
+          <div className="flex flex-col items-start">
+            <span className="text-gray-500 text-sm leading-none">COP</span>
+            <span className="text-gray-500 text-xs leading-none">/ mes</span>
+          </div>
+        </div>
+      )}
     </div>
 
-    <ul className="space-y-3 mb-8 flex-1">
+    <ul className="space-y-3 mb-6 flex-1">
       {plan.features.map((feature, i) => (
         <li key={i} className="flex items-start gap-3">
           <Check className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: plan.color }} />
@@ -126,20 +137,31 @@ const PlanCard = ({ plan, index }) => (
       ))}
     </ul>
 
-    <p className="text-xs text-gray-400 mb-4 italic">
-      Ideal para: {plan.ideal}
-    </p>
+    <div className="bg-gray-50 rounded-xl p-4 mb-4">
+      <p className="text-xs text-gray-500 mb-2 font-medium">IDEAL PARA:</p>
+      <p className="text-xs text-gray-600 leading-relaxed">{plan.ideal}</p>
+    </div>
+
+    {plan.validation && (
+      <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
+        <p className="text-xs text-blue-800 leading-relaxed">
+          <strong>Validación:</strong> {plan.validation}
+        </p>
+      </div>
+    )}
 
     <Button
       onClick={() => window.open(whatsappLink, '_blank')}
       size="lg"
       className={`w-full rounded-full text-white font-semibold py-6 text-base transition-all duration-300 group ${
-        plan.popular
+        plan.price === 'Gratuito'
+          ? 'bg-[#4CA7C0] hover:bg-[#3a8fa8] shadow-lg hover:shadow-xl'
+          : plan.popular
           ? 'bg-[#A169A2] hover:bg-[#8d5a8e] shadow-lg hover:shadow-xl'
-          : 'bg-gray-800 hover:bg-gray-700'
+          : 'bg-[#C49A2B] hover:bg-[#a67d1f] shadow-lg hover:shadow-xl'
       }`}
     >
-      Quiero unirme
+      {plan.price === 'Gratuito' ? 'Únete gratis' : 'Quiero unirme'}
       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
     </Button>
   </motion.div>
@@ -184,10 +206,10 @@ const Membresia = () => {
   return (
     <>
       <Helmet>
-        <title>Membresía - Círculo Emprendiendo Juntas</title>
+        <title>Prototipo de Membresía - Círculo Emprendiendo Juntas</title>
         <meta
           name="description"
-          content="Únete al Círculo Emprendiendo Juntas. Formación, mentoría y comunidad para emprendedoras. Planes desde $25.000 COP al mes."
+          content="Prototipo del modelo de servicio: tres niveles de membresía diseñados con metodología Design Thinking para emprendedoras."
         />
       </Helmet>
 
@@ -204,17 +226,18 @@ const Membresia = () => {
             className="space-y-6"
           >
             <span className="inline-block bg-[#A169A2]/10 text-[#A169A2] font-semibold text-sm px-4 py-2 rounded-full">
-              Círculo Emprendiendo Juntas
+              Prototipo de Servicio · Círculo Emprendiendo Juntas
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#19152A] leading-tight">
-              Formación. Mentoría.{' '}
-              <span className="text-[#A169A2]">Comunidad.</span>
+              Modelo de Membresía{' '}
+              <span className="text-[#A169A2]">Estructurado</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Tu emprendimiento no tiene que crecer solo. Únete al Círculo y descubre lo que significa avanzar acompañada.
+              Evolución natural de la comunidad gratuita: tres niveles de acompañamiento
+              diseñados según metodología de Design Thinking.
             </p>
             <p className="text-lg font-semibold text-[#4CA7C0]">
-              Desde $25.000 COP al mes
+              Desde Plan Gratuito hasta $99.900/mes
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Button
@@ -294,6 +317,203 @@ const Membresia = () => {
               <PlanCard key={plan.name} plan={plan} index={index} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Validación Preliminar del Prototipo */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <span className="text-[#4CA7C0]">Validación Preliminar </span>
+              <span className="text-[#A169A2]">del Prototipo</span>
+            </h2>
+            <p className="text-lg text-gray-600">
+              Indicadores que sustentan la viabilidad del modelo de membresía
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">💰</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Antecedente de Monetización</h3>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Las capacitaciones con <strong>Exposamarios y Hempremagd</strong> demostraron
+                disposición del mercado a pagar por formación especializada.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">📊</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Proyección de Ingresos</h3>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Con <strong>~60 emprendedoras activas</strong>, una conversión del 20% al plan Raíces
+                generaría ingresos base de <strong>~$599.000/mes</strong>.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">💬</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Retroalimentación Directa</h3>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Las integrantes han expresado <strong>interés en servicios más estructurados</strong>
+                y acceso a mentorías personalizadas.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 border border-orange-200"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">🏆</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Benchmarking</h3>
+              </div>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Comunidades similares en <strong>Latinoamérica</strong> operan exitosamente
+                con modelos de membresía en rangos similares de precio.
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 bg-gray-50 rounded-2xl p-8 text-center"
+          >
+            <p className="text-gray-600 italic">
+              <strong>Nota:</strong> El prototipo será sometido a validación mediante focus group en la siguiente fase (ACA 3).
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Tabla Comparativa del Prototipo */}
+      <section className="py-16 px-4 bg-gradient-to-br from-purple-50 via-white to-teal-50">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Comparativa del <span className="text-[#A169A2]">Modelo de Servicio</span>
+            </h2>
+            <p className="text-lg text-gray-600">
+              Estructura detallada de los tres niveles del prototipo
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
+          >
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-gradient-to-r from-[#A169A2] to-[#4CA7C0] text-white">
+                    <th className="text-left py-4 px-6 font-bold">Aspecto</th>
+                    <th className="text-center py-4 px-6 font-bold">🌱 Semilla (Gratuito)</th>
+                    <th className="text-center py-4 px-6 font-bold bg-[#A169A2]/20">🌿 Raíces ($49.900/mes)</th>
+                    <th className="text-center py-4 px-6 font-bold">🌸 Florecer ($99.900/mes)</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700">
+                  <tr className="border-b border-gray-100 bg-gray-50/50">
+                    <td className="py-4 px-6 font-medium">Comunidad WhatsApp</td>
+                    <td className="py-4 px-6 text-center">✓ Grupo general</td>
+                    <td className="py-4 px-6 text-center bg-[#A169A2]/5">✓ General + canal VIP</td>
+                    <td className="py-4 px-6 text-center">✓ General + VIP + directorio</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-4 px-6 font-medium">Contenido educativo</td>
+                    <td className="py-4 px-6 text-center">✓ Publicaciones en redes</td>
+                    <td className="py-4 px-6 text-center bg-[#A169A2]/5">✓ + Guías descargables</td>
+                    <td className="py-4 px-6 text-center">✓ + Masterclasses exclusivas</td>
+                  </tr>
+                  <tr className="border-b border-gray-100 bg-gray-50/50">
+                    <td className="py-4 px-6 font-medium">Formación</td>
+                    <td className="py-4 px-6 text-center">Talleres abiertos ocasionales</td>
+                    <td className="py-4 px-6 text-center bg-[#A169A2]/5">1 taller mensual grupal</td>
+                    <td className="py-4 px-6 text-center">Talleres + 1 mentoría 1:1 mensual</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-4 px-6 font-medium">Visibilidad</td>
+                    <td className="py-4 px-6 text-center">Menciones en comunidad</td>
+                    <td className="py-4 px-6 text-center bg-[#A169A2]/5">+ 1 feature mensual en redes</td>
+                    <td className="py-4 px-6 text-center">+ Feature en web + redes + eventos</td>
+                  </tr>
+                  <tr className="border-b border-gray-100 bg-gray-50/50">
+                    <td className="py-4 px-6 font-medium">Networking</td>
+                    <td className="py-4 px-6 text-center">Eventos abiertos</td>
+                    <td className="py-4 px-6 text-center bg-[#A169A2]/5">+ Eventos exclusivos trimestrales</td>
+                    <td className="py-4 px-6 text-center">+ Acceso prioritario a aliados y ferias</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8 text-center"
+          >
+            <p className="text-gray-600 italic text-sm">
+              <strong>Diseño del Prototipo:</strong> Siguiendo la metodología de Design Thinking,
+              cada nivel responde a diferentes momentos del journey emprendedor.
+            </p>
+          </motion.div>
         </div>
       </section>
 
