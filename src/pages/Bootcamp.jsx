@@ -86,10 +86,10 @@ const modules = [
     time: '45 min',
     icon: Camera,
     color: '#E1306C',
-    description: 'No necesitas cámara profesional ni estudio. Necesitas saber qué hacer con lo que ya tienes. En este módulo aprenderás los 3 errores que arruinan una foto de producto, cómo configurar tu celular, qué fondos usar sin gastar un peso, y cómo editar en 3 minutos con Lightroom Mobile. La diferencia entre una foto amateur y una profesional está en los detalles.',
+    description: 'No necesitas cámara profesional ni estudio. Necesitas saber qué hacer con lo que ya tienes. En este módulo aprenderás los 3 errores que arruinan una foto de producto, cómo configurar tu celular, qué fondos usar sin gastar un peso, y cómo editar tus fotos de forma rápida y profesional. La diferencia entre una foto amateur y una que vende está en los detalles.',
     highlights: [
       'Fotografía de producto con celular: luz, fondo y composición',
-      'Edición profesional en Lightroom Mobile (gratuito)',
+      'Edición profesional de fotos con herramientas gratuitas',
       'Preset descargable listo para tu tipo de producto',
       'Formatos correctos para feed, historia y reels',
     ],
@@ -104,7 +104,7 @@ const kitItems = [
   { icon: Brain, name: 'Biblioteca de 4 prompts IA', format: 'Personalizados' },
   { icon: Palette, name: 'Pieza visual de tu producto', format: 'PNG exportado' },
   { icon: Camera, name: 'Checklist fotografía con celular', format: 'PDF imprimible' },
-  { icon: Palette, name: 'Preset Lightroom Mobile', format: 'Archivo DNG' },
+  { icon: Palette, name: 'Preset de edición fotográfica', format: 'Archivo descargable' },
   { icon: Target, name: 'Plan de acción 7 días', format: 'Google Docs' },
 ];
 
@@ -152,7 +152,7 @@ const faqs = [
   },
   {
     q: '¿Qué me llevo exactamente?',
-    a: 'Un kit digital completo: ficha de diagnóstico de tu negocio, calendario de contenido para 30 días, guía de estructura de copy con 5 ejemplos, 3 copies listos que tú misma escribiste, biblioteca de 4 prompts de IA personalizados, una pieza visual exportada, checklist de fotografía, preset de Lightroom Mobile y tu plan de acción de 7 días.',
+    a: 'Un kit digital completo: ficha de diagnóstico de tu negocio, calendario de contenido para 30 días, guía de estructura de copy con 5 ejemplos, 3 copies listos que tú misma escribiste, biblioteca de 4 prompts de IA personalizados, una pieza visual exportada, checklist de fotografía, preset de edición fotográfica y tu plan de acción de 7 días.',
   },
   {
     q: '¿Cómo pago?',
