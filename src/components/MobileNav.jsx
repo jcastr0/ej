@@ -15,6 +15,7 @@ const navLinks = [
   { to: '/comunidad', label: 'Comunidad' },
   { to: '/blog', label: 'Blog' },
   { to: '/membresia', label: 'Membresía' },
+  { to: '/bootcamp', label: '🔥 Bootcamp' },
 ];
 
 const WHATSAPP_COMUNIDAD = 'https://chat.whatsapp.com/H7tDkda2guM37g2o4GEEIr';

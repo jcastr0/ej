@@ -10,6 +10,7 @@ const links = [
 	{ to: '/comunidad', label: 'Comunidad' },
 	{ to: '/blog', label: 'Blog' },
 	{ to: '/membresia', label: 'Membresía' },
+	{ to: '/bootcamp', label: '🔥 Bootcamp' },
 ];
 
 const Navbar = () => {

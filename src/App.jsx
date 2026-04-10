@@ -24,6 +24,7 @@ import ArbolProblemas from '@/pages/ArbolProblemas';
 import BusinessModelCanvas from '@/pages/BusinessModelCanvas';
 import ValuePropositionCanvas from '@/pages/ValuePropositionCanvas';
 import PropuestaValor from '@/pages/PropuestaValor';
+import Bootcamp from '@/pages/Bootcamp';
 import Navbar from '@/components/Navbar';
 
 const HomePage = () => (
@@ -62,6 +63,7 @@ function App() {
           <Route path="/business-model-canvas" element={<BusinessModelCanvas />} />
           <Route path="/value-proposition-canvas" element={<ValuePropositionCanvas />} />
           <Route path="/propuesta-valor" element={<PropuestaValor />} />
+          <Route path="/bootcamp" element={<Bootcamp />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Toaster />
