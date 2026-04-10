@@ -294,7 +294,7 @@ const Bootcamp = () => {
             >
               <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-6 py-3">
                 <span className="text-white/40 text-sm line-through" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                  $80.000
+                  $120.000
                 </span>
                 <span className="text-3xl font-bold text-white">$50.000</span>
                 <span className="text-white/50 text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -747,7 +747,7 @@ const Bootcamp = () => {
               <div className="text-center space-y-4 pt-4">
                 <h3 className="text-xl font-bold">Precio de Lanzamiento</h3>
                 <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-lg text-white/60 line-through">$80.000</span>
+                  <span className="text-lg text-white/60 line-through">$120.000</span>
                   <span className="text-6xl font-extrabold">$50.000</span>
                 </div>
                 <p className="text-white/70 text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>COP · Pago único</p>
@@ -790,7 +790,7 @@ const Bootcamp = () => {
                 <h3 className="text-xl font-bold text-[#19152A]">Precio Regular</h3>
                 <div className="flex items-baseline justify-center gap-2">
                   <span className="text-lg text-gray-400">$</span>
-                  <span className="text-6xl font-extrabold text-[#19152A]">80.000</span>
+                  <span className="text-6xl font-extrabold text-[#19152A]">120.000</span>
                 </div>
                 <p className="text-gray-400 text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>COP · Pago único</p>
 
