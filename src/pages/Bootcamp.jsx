@@ -72,11 +72,11 @@ const modules = [
     time: '1h 30min',
     icon: Brain,
     color: '#C49A2B',
-    description: 'La IA no reemplaza tu voz, la amplifica. En este módulo usarás ChatGPT, Canva con IA y otras herramientas en tiempo real para generar descripciones de producto, responder objeciones de clientas, crear ideas de contenido y optimizar tu bio de Instagram. Todo personalizado para tu negocio, no genérico.',
+    description: 'La IA no reemplaza tu voz, la amplifica. En este módulo usarás las tres herramientas más poderosas del momento — ChatGPT, Claude y Gemini — en tiempo real para generar descripciones de producto, responder objeciones de clientas, crear ideas de contenido y optimizar tu bio de Instagram. Todo personalizado para tu negocio, no genérico.',
     highlights: [
       '4 prompts personalizados listos para usar',
       'Banco de respuestas para objeciones en DMs',
-      'Canva con IA: pieza visual de tu producto exportada',
+      'ChatGPT, Claude y Gemini aplicados a tu negocio',
       'Plan de contenido de 10 piezas generado con IA',
     ],
   },
