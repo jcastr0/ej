@@ -45,7 +45,7 @@ const modules = [
     time: '30 min',
     icon: Target,
     color: '#4CA7C0',
-    description: 'Antes de ejecutar, necesitas claridad. En este módulo haces una radiografía honesta de tu negocio: dónde estás realmente, qué está funcionando, qué no, y cuál es el problema clave que está frenando tus ventas digitales. Con esa claridad, todo lo que construyas después tiene dirección.',
+    description: 'Antes de ejecutar, necesitas claridad. En este módulo harás una radiografía honesta de tu negocio: dónde estás realmente, qué está funcionando, qué no, y cuál es el problema clave que está frenando tus ventas digitales. Con esa claridad, todo lo que construyas después, tiene dirección.',
     highlights: [
       'Radiografía completa de tu negocio (8 preguntas clave)',
       'Identificación de bloqueos reales en ventas',
@@ -58,7 +58,7 @@ const modules = [
     time: '1h 15min',
     icon: Zap,
     color: '#A169A2',
-    description: 'Publicar sin plan es como abrir una tienda sin vitrina. Aquí construyes tu ecosistema de contenido: los 4 tipos de publicaciones que necesitas para vender de forma constante, cómo distribuirlos en la semana sin agotarte, y la estructura exacta de un copy que mueve a la acción. Sales con 3 textos terminados, listos para publicar.',
+    description: 'Publicar sin plan es como abrir una tienda sin vitrina. Aquí construirás tu ecosistema de contenido: los 4 tipos de publicaciones que necesitas para vender de forma constante, cómo distribuirlos en la semana sin agotarte, y la estructura exacta de un copy que mueve a la acción. Saldrás con 3 textos terminados, listos para publicar.',
     highlights: [
       'Ecosistema de contenido: inspirar, educar, probar y vender',
       'Estructura de copy: gancho → historia → prueba → CTA',
@@ -72,7 +72,7 @@ const modules = [
     time: '1h 30min',
     icon: Brain,
     color: '#C49A2B',
-    description: 'La IA no reemplaza tu voz, la amplifica. En este módulo usas ChatGPT, Canva con IA y otras herramientas en tiempo real para generar descripciones de producto, responder objeciones de clientas, crear ideas de contenido y optimizar tu bio de Instagram. Todo personalizado para tu negocio, no genérico.',
+    description: 'La IA no reemplaza tu voz, la amplifica. En este módulo usarás ChatGPT, Canva con IA y otras herramientas en tiempo real para generar descripciones de producto, responder objeciones de clientas, crear ideas de contenido y optimizar tu bio de Instagram. Todo personalizado para tu negocio, no genérico.',
     highlights: [
       '4 prompts personalizados listos para usar',
       'Banco de respuestas para objeciones en DMs',
@@ -86,7 +86,7 @@ const modules = [
     time: '45 min',
     icon: Camera,
     color: '#E1306C',
-    description: 'No necesitas cámara profesional ni estudio. Necesitas saber qué hacer con lo que ya tienes. En este módulo aprendes los 3 errores que arruinan una foto de producto, cómo configurar tu celular, qué fondos usar sin gastar un peso, y cómo editar en 3 minutos con Lightroom Mobile. La diferencia entre una foto amateur y una profesional está en los detalles.',
+    description: 'No necesitas cámara profesional ni estudio. Necesitas saber qué hacer con lo que ya tienes. En este módulo aprenderás los 3 errores que arruinan una foto de producto, cómo configurar tu celular, qué fondos usar sin gastar un peso, y cómo editar en 3 minutos con Lightroom Mobile. La diferencia entre una foto amateur y una profesional está en los detalles.',
     highlights: [
       'Fotografía de producto con celular: luz, fondo y composición',
       'Edición profesional en Lightroom Mobile (gratuito)',
@@ -551,15 +551,15 @@ const Bootcamp = () => {
               Programa completo
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#19152A]">
-              4 módulos, <span className="text-[#C49A2B] italic">4 horas</span>,
+              4 Módulos, <span className="text-[#C49A2B] italic">4 horas</span>,
               <br className="hidden sm:block" /> todo con tu negocio real
             </h2>
             <p
               className="text-gray-500 mt-4 max-w-2xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              No vienes a escuchar una charla. Vienes a trabajar. Cada módulo tiene ejercicios prácticos que
-              ejecutas en tiempo real, con retroalimentación directa del equipo facilitador.
+              No vendrás a escuchar una charla. Vendrás a trabajar. Cada módulo tiene ejercicios prácticos que
+              ejecutarás en tiempo real, con retroalimentación directa del equipo facilitador.
             </p>
           </motion.div>
 
@@ -636,7 +636,7 @@ const Bootcamp = () => {
                 <div>
                   <h3 className="text-xl font-bold mb-1">Cierre: Tu Plan de Acción + 7 Días de Acompañamiento</h3>
                   <p className="text-white/80 text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                    No sales con "tareas pendientes". Sales con un plan concreto de 7 días: qué publicar, cuándo, en qué canal y con qué objetivo. Además, durante la semana siguiente tienes un grupo exclusivo de WhatsApp con revisión de avances y respuesta a dudas del equipo.
+                    No saldrás con "tareas pendientes". Saldrás con un plan concreto de 7 días: qué publicar, cuándo, en qué canal y con qué objetivo. Además, durante la semana siguiente tendrás un grupo exclusivo de WhatsApp con revisión de avances y respuesta a dudas del equipo.
                   </p>
                 </div>
                 <span className="text-sm font-semibold bg-white/20 px-4 py-2 rounded-full flex-shrink-0" style={{ fontFamily: "'DM Sans', sans-serif" }}>
