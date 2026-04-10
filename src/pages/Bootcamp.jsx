@@ -99,7 +99,7 @@ const team = [
   {
     name: 'Sharon Niebles',
     role: 'Marketing digital y fotografía de producto',
-    image: '/images/autor_bedealar.jpg',
+    image: '/images/sharon.JPG',
     bio: 'Administradora de empresas y fundadora de Shabbs Col. Experiencia real en contenido de producto, manejo de comunidad y fidelización de clientes.',
   },
   {
