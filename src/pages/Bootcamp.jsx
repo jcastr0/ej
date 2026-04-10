@@ -103,9 +103,9 @@ const team = [
     bio: 'Administradora de empresas y fundadora de Shabbs Col. Experiencia real en contenido de producto, manejo de comunidad y fidelización de clientes.',
   },
   {
-    name: 'Jonathan Castro',
+    name: 'Jhonatan Castro',
     role: 'IA aplicada e infraestructura digital',
-    image: '/images/autor_alexis.jpg',
+    image: '/images/jhonatan.jpg',
     bio: 'Ingeniero de sistemas, magíster y docente universitario. Especialista en inteligencia artificial aplicada a negocios.',
   },
 ];
