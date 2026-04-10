@@ -112,13 +112,13 @@ const team = [
   {
     name: 'Leidy Carolina Granados',
     role: 'Dirección estratégica y metodología',
-    image: '/images/carolina_granados.jpg',
+    image: '/images/carito.png',
     bio: 'Fundadora de Emprendiendo Juntas. Contadora pública y estudiante de Comunicación Social. Lleva 5 años acompañando emprendedoras desde la estrategia, el contenido y la cercanía humana. Ella diseñó la metodología de este bootcamp porque conoce de primera mano los retos que enfrentas.',
   },
   {
     name: 'Sharon Niebles',
     role: 'Marketing digital y fotografía de producto',
-    image: '/images/sharon.JPG',
+    image: '/images/sharon.png',
     bio: 'Ingeniera industrial, experta en cocina y fundadora de Shabbs Col, su propia marca de productos físicos. No te enseña desde la teoría: te enseña desde la trinchera de alguien que publica, vende y fideliza clientes todos los días.',
   },
   {
