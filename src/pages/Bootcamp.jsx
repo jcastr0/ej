@@ -119,7 +119,7 @@ const team = [
     name: 'Sharon Niebles',
     role: 'Marketing digital y fotografía de producto',
     image: '/images/sharon.JPG',
-    bio: 'Ingeniera industrial y fundadora de Shabbs Col, su propia marca de productos físicos. No te enseña desde la teoría: te enseña desde la trinchera de alguien que publica, vende y fideliza clientes todos los días.',
+    bio: 'Ingeniera industrial, experta en cocina y fundadora de Shabbs Col, su propia marca de productos físicos. No te enseña desde la teoría: te enseña desde la trinchera de alguien que publica, vende y fideliza clientes todos los días.',
   },
   {
     name: 'Jhonatan Castro',
