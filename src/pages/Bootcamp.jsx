@@ -45,7 +45,7 @@ const modules = [
     time: '30 min',
     icon: Target,
     color: '#4CA7C0',
-    description: 'Identifica con precisión dónde está tu negocio y cuál es el único problema más urgente a resolver en ventas digitales.',
+    description: 'Identifica con precisión dónde está tu negocio y cuál es el problema más urgente a resolver en ventas digitales.',
     highlights: ['Ficha "La radiografía de mi negocio"', 'Plenaria rápida de bloqueos', 'Ajuste personalizado del bootcamp'],
   },
   {
