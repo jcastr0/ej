@@ -32,48 +32,67 @@ const whatsappLink = 'https://chat.whatsapp.com/H7tDkda2guM37g2o4GEEIr';
 /* ─── Data ───────────────────────────────────── */
 
 const painPoints = [
-  { icon: BarChart3, text: 'Publicas sin estrategia y los likes no se convierten en ventas' },
-  { icon: Palette, text: 'Tu producto se ve igual al de la competencia — falta diferenciación' },
-  { icon: Brain, text: 'No usas herramientas de IA que podrían ahorrarte horas cada semana' },
-  { icon: Camera, text: 'Las fotos de tu producto no comunican su verdadero valor' },
+  { icon: BarChart3, text: 'Publicas todos los días, consigues likes… pero al final del mes las ventas siguen igual. El contenido no está conectado con una estrategia que convierta.' },
+  { icon: Palette, text: 'Tu producto es bueno, pero en redes se ve igual al de cien marcas más. Sin una propuesta visual y narrativa clara, el cliente no tiene razón para elegirte a ti.' },
+  { icon: Brain, text: 'Existen herramientas de IA que pueden escribir tus textos, generar ideas y crear piezas visuales en minutos. Pero nadie te ha enseñado a usarlas para tu tipo de negocio.' },
+  { icon: Camera, text: 'Las fotos de tu producto no reflejan lo que realmente vale. Un fondo desordenado, mala iluminación o el ángulo equivocado pueden costarte la venta antes de que lean tu texto.' },
 ];
 
 const modules = [
   {
     number: '01',
-    title: 'Diagnóstico y Enfoque',
+    title: 'Diagnóstico Estratégico y Enfoque Comercial',
     time: '30 min',
     icon: Target,
     color: '#4CA7C0',
-    description: 'Identifica con precisión dónde está tu negocio y cuál es el problema más urgente a resolver en ventas digitales.',
-    highlights: ['Ficha "La radiografía de mi negocio"', 'Plenaria rápida de bloqueos', 'Ajuste personalizado del bootcamp'],
+    description: 'Antes de ejecutar, necesitas claridad. En este módulo haces una radiografía honesta de tu negocio: dónde estás realmente, qué está funcionando, qué no, y cuál es el problema clave que está frenando tus ventas digitales. Con esa claridad, todo lo que construyas después tiene dirección.',
+    highlights: [
+      'Radiografía completa de tu negocio (8 preguntas clave)',
+      'Identificación de bloqueos reales en ventas',
+      'Enfoque estratégico personalizado para el bootcamp',
+    ],
   },
   {
     number: '02',
-    title: 'Marketing Digital Aplicado',
+    title: 'Marketing Digital Aplicado a Producto Físico',
     time: '1h 15min',
     icon: Zap,
     color: '#A169A2',
-    description: 'Construye tu estrategia de contenido y redacta al menos 3 copies listos para publicar — todo con tu negocio real.',
-    highlights: ['Ecosistema de contenido', 'Copy que vende: estructura gancho → CTA', '3 copies finalizados en el taller'],
+    description: 'Publicar sin plan es como abrir una tienda sin vitrina. Aquí construyes tu ecosistema de contenido: los 4 tipos de publicaciones que necesitas para vender de forma constante, cómo distribuirlos en la semana sin agotarte, y la estructura exacta de un copy que mueve a la acción. Sales con 3 textos terminados, listos para publicar.',
+    highlights: [
+      'Ecosistema de contenido: inspirar, educar, probar y vender',
+      'Estructura de copy: gancho → historia → prueba → CTA',
+      '3 copies finalizados y revisados en el taller',
+      'Calendario de contenido para las próximas 2 semanas',
+    ],
   },
   {
     number: '03',
-    title: 'Inteligencia Artificial Aplicada',
+    title: 'Inteligencia Artificial para Emprendedoras',
     time: '1h 30min',
     icon: Brain,
     color: '#C49A2B',
-    description: 'Usa ChatGPT, Canva AI y más en tiempo real para generar contenido, textos y piezas visuales para tu negocio.',
-    highlights: ['4 prompts personalizados listos', 'Canva con IA para producto físico', 'Pieza visual exportada'],
+    description: 'La IA no reemplaza tu voz, la amplifica. En este módulo usas ChatGPT, Canva con IA y otras herramientas en tiempo real para generar descripciones de producto, responder objeciones de clientas, crear ideas de contenido y optimizar tu bio de Instagram. Todo personalizado para tu negocio, no genérico.',
+    highlights: [
+      '4 prompts personalizados listos para usar',
+      'Banco de respuestas para objeciones en DMs',
+      'Canva con IA: pieza visual de tu producto exportada',
+      'Plan de contenido de 10 piezas generado con IA',
+    ],
   },
   {
     number: '04',
-    title: 'Contenido Visual con Celular',
+    title: 'Fotografía y Contenido Visual con tu Celular',
     time: '45 min',
     icon: Camera,
     color: '#E1306C',
-    description: 'Aprende a fotografiar y presentar tu producto profesionalmente con lo que ya tienes — sin cámara ni estudio.',
-    highlights: ['Fotografía de producto con celular', 'Edición en Lightroom Mobile', 'Preset profesional incluido'],
+    description: 'No necesitas cámara profesional ni estudio. Necesitas saber qué hacer con lo que ya tienes. En este módulo aprendes los 3 errores que arruinan una foto de producto, cómo configurar tu celular, qué fondos usar sin gastar un peso, y cómo editar en 3 minutos con Lightroom Mobile. La diferencia entre una foto amateur y una profesional está en los detalles.',
+    highlights: [
+      'Fotografía de producto con celular: luz, fondo y composición',
+      'Edición profesional en Lightroom Mobile (gratuito)',
+      'Preset descargable listo para tu tipo de producto',
+      'Formatos correctos para feed, historia y reels',
+    ],
   },
 ];
 
@@ -94,46 +113,50 @@ const team = [
     name: 'Leidy Carolina Granados',
     role: 'Dirección estratégica y metodología',
     image: '/images/carolina_granados.jpg',
-    bio: 'Fundadora y directora de Emprendiendo Juntas. Comunicadora con formación en contabilidad. Diseña la metodología y conoce a profundidad el perfil de la emprendedora samaria.',
+    bio: 'Fundadora de Emprendiendo Juntas. Contadora pública y estudiante de Comunicación Social. Lleva 5 años acompañando emprendedoras desde la estrategia, el contenido y la cercanía humana. Ella diseñó la metodología de este bootcamp porque conoce de primera mano los retos que enfrentas.',
   },
   {
     name: 'Sharon Niebles',
     role: 'Marketing digital y fotografía de producto',
     image: '/images/sharon.JPG',
-    bio: 'Administradora de empresas y fundadora de Shabbs Col. Experiencia real en contenido de producto, manejo de comunidad y fidelización de clientes.',
+    bio: 'Administradora de empresas y fundadora de Shabbs Col, su propia marca de productos físicos. No te enseña desde la teoría: te enseña desde la trinchera de alguien que publica, vende y fideliza clientes todos los días.',
   },
   {
     name: 'Jhonatan Castro',
-    role: 'IA aplicada e infraestructura digital',
+    role: 'Inteligencia artificial e infraestructura digital',
     image: '/images/jhonatan.png',
-    bio: 'Ingeniero de sistemas, magíster y docente universitario. Especialista en inteligencia artificial aplicada a negocios.',
+    bio: 'Ingeniero de sistemas, magíster y docente universitario. Traduce la inteligencia artificial a un lenguaje que puedes aplicar hoy mismo en tu negocio, sin necesidad de ser experta en tecnología.',
   },
 ];
 
 const faqs = [
   {
     q: '¿Necesito saber de tecnología para participar?',
-    a: 'No. El bootcamp está diseñado para principiantes. Te guiamos paso a paso en cada herramienta.',
+    a: 'Para nada. Este bootcamp está diseñado pensando en emprendedoras que nunca han usado herramientas de IA. Te guiamos paso a paso, con pantalla compartida, y cada ejercicio lo haces en tiempo real con acompañamiento directo.',
   },
   {
     q: '¿Es en vivo o grabado?',
-    a: 'Es 100% en vivo por Zoom/Google Meet. Además, recibirás la grabación completa después del evento.',
+    a: 'Es 100% en vivo por Zoom o Google Meet. Eso significa que puedes hacer preguntas, recibir retroalimentación inmediata y ajustar tu trabajo en el momento. Además, recibirás la grabación completa después del evento para que puedas revisarla cuantas veces quieras.',
   },
   {
     q: '¿Qué tipo de negocio necesito tener?',
-    a: 'El bootcamp está optimizado para productos físicos: artesanías, alimentos, cosméticos, moda, accesorios, etc. Si ya tienes ventas (aunque sean esporádicas), este es para ti.',
+    a: 'El bootcamp está optimizado para emprendedoras con productos físicos: artesanías, alimentos, cosméticos, moda, accesorios, decoración, etc. Si ya tienes un producto y has tenido ventas (aunque sean esporádicas), este bootcamp es para ti. Si vendes servicios o aún no tienes producto, esta edición no se ajusta a tu perfil.',
   },
   {
-    q: '¿Cuántas personas participan?',
-    a: 'Máximo 10 personas por edición. Esto garantiza atención personalizada y retroalimentación directa.',
+    q: '¿Por qué solo 10 personas?',
+    a: 'Porque cada ejercicio se hace con tu negocio real y el equipo facilitador revisa tu trabajo en vivo. Con más de 10 personas, sería imposible darte la atención que mereces. Este no es un webinar masivo: es un taller intensivo donde sales con trabajo hecho.',
   },
   {
     q: '¿Qué pasa después del bootcamp?',
-    a: 'Tienes 7 días de acompañamiento post-bootcamp en un grupo exclusivo de WhatsApp con revisión de avances y respuesta a dudas.',
+    a: 'No te dejamos sola. Durante los 7 días siguientes, tienes acceso a un grupo exclusivo de WhatsApp donde puedes compartir lo que publicaste, recibir retroalimentación del equipo y resolver dudas sobre los materiales. A mitad de semana hacemos una revisión de avances.',
+  },
+  {
+    q: '¿Qué me llevo exactamente?',
+    a: 'Un kit digital completo: ficha de diagnóstico de tu negocio, calendario de contenido para 30 días, guía de estructura de copy con 5 ejemplos, 3 copies listos que tú misma escribiste, biblioteca de 4 prompts de IA personalizados, una pieza visual exportada, checklist de fotografía, preset de Lightroom Mobile y tu plan de acción de 7 días.',
   },
   {
     q: '¿Cómo pago?',
-    a: 'Transferencia bancaria o Nequi. La confirmación es por WhatsApp. Simple y directo.',
+    a: 'Transferencia bancaria, Nequi o Bancolombia. Una vez realices el pago, envías el comprobante por WhatsApp y recibes la confirmación con todos los detalles de conexión y materiales previos.',
   },
 ];
 
@@ -235,9 +258,10 @@ const Bootcamp = () => {
               className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              En <strong className="text-white">4 horas intensivas</strong>, construye tu sistema de contenido
-              para ventas: estrategia, copies, piezas visuales y un plan de acción.{' '}
-              <strong className="text-[#C49A2B]">Todo aplicado a tu negocio real.</strong>
+              En <strong className="text-white">4 horas intensivas</strong>, construye el sistema completo que tu negocio necesita
+              para vender en redes: estrategia de contenido, textos que convierten, piezas visuales con IA y un plan de acción
+              concreto para los próximos 7 días.{' '}
+              <strong className="text-[#C49A2B]">Todo aplicado directamente a tu negocio real, en tiempo real.</strong>
             </motion.p>
 
             <motion.div
@@ -339,9 +363,9 @@ const Bootcamp = () => {
               ¿Te suena familiar?
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#19152A] leading-tight">
-              Tienes un buen producto,
+              Tu producto es bueno.
               <br />
-              <span className="text-[#A169A2] italic">pero no se vende como debería</span>
+              <span className="text-[#A169A2] italic">El problema es cómo lo comunicas.</span>
             </h2>
           </motion.div>
 
@@ -374,8 +398,8 @@ const Bootcamp = () => {
           >
             <div className="inline-block bg-gradient-to-r from-[#A169A2]/10 to-[#4CA7C0]/10 rounded-2xl px-8 py-5 border border-purple-100">
               <p className="text-lg font-bold text-[#19152A]">
-                Este bootcamp resuelve exactamente eso —{' '}
-                <span className="text-[#C49A2B]">en 4 horas.</span>
+                Este bootcamp existe para resolver exactamente eso —{' '}
+                <span className="text-[#C49A2B]">en una sola tarde.</span>
               </p>
             </div>
           </motion.div>
@@ -398,13 +422,14 @@ const Bootcamp = () => {
           >
             <Award className="w-14 h-14 text-[#C49A2B] mx-auto mb-6" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-              Nuestra promesa
+              Lo que te prometemos
             </h2>
             <p className="text-xl sm:text-2xl text-white/70 mt-6 leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              En <strong className="text-white">4 horas</strong>, cada participante construye su{' '}
-              <strong className="text-[#C49A2B]">sistema de contenido para ventas</strong>: estrategia, copies, piezas
-              visuales y un plan de acción para los próximos 7 días.{' '}
-              <strong className="text-[#4CA7C0]">Todo aplicado directamente a su negocio, en tiempo real.</strong>
+              Llegas con un producto que no se vende como debería. En <strong className="text-white">4 horas</strong>,
+              construyes tu <strong className="text-[#C49A2B]">sistema completo de contenido para ventas</strong>:
+              una estrategia clara, textos que convierten, piezas visuales creadas con IA y un plan de acción
+              paso a paso para los próximos 7 días.{' '}
+              <strong className="text-[#4CA7C0]">No es teoría. Es trabajo hecho, con tu negocio, en tiempo real.</strong>
             </p>
           </motion.div>
 
@@ -442,8 +467,11 @@ const Bootcamp = () => {
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#19152A]">
-              ¿Es para <span className="text-[#A169A2] italic">ti</span>?
+              ¿Este bootcamp es para <span className="text-[#A169A2] italic">ti</span>?
             </h2>
+            <p className="text-gray-500 mt-4 max-w-xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              No es para todas. Y eso es intencional. Preferimos ser claras desde el inicio.
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -460,11 +488,11 @@ const Bootcamp = () => {
               </h3>
               <ul className="space-y-4">
                 {[
-                  'Vendes productos físicos (artesanías, alimentos, cosméticos, moda, accesorios…)',
-                  'Ya tienes ventas, aunque sean esporádicas',
-                  'Usas Instagram, Facebook o TikTok pero sin estrategia ni resultados consistentes',
-                  'Puedes producir y entregar pedidos — tu problema no es el producto',
-                  'Quieres resultados el mismo día, no teoría para "después"',
+                  'Vendes productos físicos: artesanías, alimentos, cosméticos, moda, accesorios, decoración…',
+                  'Ya tienes ventas, aunque sean esporádicas o por temporada',
+                  'Usas Instagram, Facebook o TikTok, pero sientes que publicas al vacío',
+                  'Tu producto es bueno y puedes cumplir pedidos — el problema no es lo que vendes, sino cómo lo comunicas',
+                  'Quieres salir del bootcamp con trabajo hecho, no con teoría para "aplicar después"',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -489,9 +517,9 @@ const Bootcamp = () => {
               </h3>
               <ul className="space-y-4">
                 {[
-                  'Aún estás en etapa de ideación (sin producto ni ventas previas)',
-                  'Tu negocio es de servicios (el contenido está optimizado para producto físico)',
-                  'Buscas un curso teórico o grabado para ver "cuando puedas"',
+                  'Estás en etapa de ideación — aún no tienes producto ni has hecho ventas',
+                  'Tu negocio es de servicios (todo el contenido está diseñado para producto físico)',
+                  'Buscas un curso grabado para ver "cuando puedas" — esto es en vivo y requiere tu presencia activa',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="w-5 h-5 flex-shrink-0 mt-0.5 text-gray-400 text-center font-bold">—</span>
@@ -523,13 +551,15 @@ const Bootcamp = () => {
               Programa completo
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#19152A]">
-              4 módulos, <span className="text-[#C49A2B] italic">4 horas</span>
+              4 módulos, <span className="text-[#C49A2B] italic">4 horas</span>,
+              <br className="hidden sm:block" /> todo con tu negocio real
             </h2>
             <p
-              className="text-gray-500 mt-4 max-w-xl mx-auto"
+              className="text-gray-500 mt-4 max-w-2xl mx-auto"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              Cada módulo incluye ejercicios prácticos que ejecutas en tiempo real con tu negocio.
+              No vienes a escuchar una charla. Vienes a trabajar. Cada módulo tiene ejercicios prácticos que
+              ejecutas en tiempo real, con retroalimentación directa del equipo facilitador.
             </p>
           </motion.div>
 
@@ -604,9 +634,9 @@ const Bootcamp = () => {
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-1">Cierre: Plan de Acción + 7 Días de Acompañamiento</h3>
+                  <h3 className="text-xl font-bold mb-1">Cierre: Tu Plan de Acción + 7 Días de Acompañamiento</h3>
                   <p className="text-white/80 text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                    Sales con tu plan concreto de 7 días y un grupo exclusivo de WhatsApp para seguimiento post-bootcamp con revisión de avances.
+                    No sales con "tareas pendientes". Sales con un plan concreto de 7 días: qué publicar, cuándo, en qué canal y con qué objetivo. Además, durante la semana siguiente tienes un grupo exclusivo de WhatsApp con revisión de avances y respuesta a dudas del equipo.
                   </p>
                 </div>
                 <span className="text-sm font-semibold bg-white/20 px-4 py-2 rounded-full flex-shrink-0" style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -630,10 +660,10 @@ const Bootcamp = () => {
           >
             <Gift className="w-12 h-12 text-[#C49A2B] mx-auto mb-4" />
             <h2 className="text-3xl sm:text-4xl font-bold text-[#19152A]">
-              Tu <span className="text-[#C49A2B] italic">Kit Digital</span> incluido
+              Tu <span className="text-[#C49A2B] italic">Kit Digital</span> completo
             </h2>
-            <p className="text-gray-500 mt-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              Todo lo que te llevas al terminar el bootcamp — listo para usar
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              9 materiales listos para usar desde el día siguiente. No son plantillas genéricas: los construyes tú durante el bootcamp, adaptados a tu negocio.
             </p>
           </motion.div>
 
@@ -673,8 +703,9 @@ const Bootcamp = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#19152A]">
               Quiénes te <span className="text-[#A169A2] italic">acompañan</span>
             </h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              Un equipo que combina experiencia real en emprendimiento, comunicación e inteligencia artificial.
+            <p className="text-gray-500 mt-3 max-w-2xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              No son conferencistas que te hablan desde una pantalla. Son profesionales que combinan emprendimiento real,
+              comunicación estratégica e inteligencia artificial. Cada una aporta desde su experiencia viva.
             </p>
           </motion.div>
 
@@ -724,10 +755,11 @@ const Bootcamp = () => {
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#19152A]">
-              Inversión en <span className="text-[#C49A2B] italic">tu negocio</span>
+              Una inversión que se paga <span className="text-[#C49A2B] italic">con tu primera venta</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              Precio de lanzamiento exclusivo para las primeras inscritas de la primera edición.
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Es la primera edición de este bootcamp. Por eso, las primeras inscritas acceden a un precio de lanzamiento
+              que no se repetirá. Es nuestra forma de decir: confiamos tanto en esto que queremos que lo pruebes antes de que suba.
             </p>
           </motion.div>
 
@@ -876,15 +908,16 @@ const Bootcamp = () => {
             <div className="relative z-10 space-y-6">
               <Sparkles className="w-12 h-12 text-[#C49A2B] mx-auto" />
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Deja de publicar sin estrategia.
+                Llegaste hasta aquí por algo.
                 <br />
-                <span className="text-[#C49A2B] italic">Empieza a vender.</span>
+                <span className="text-[#C49A2B] italic">Tu negocio merece este paso.</span>
               </h2>
               <p
                 className="text-lg text-white/60 max-w-xl mx-auto"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Solo 10 cupos por edición. Inscríbete ahora y transforma la forma en que tu negocio se comunica y vende.
+                Solo 10 cupos por edición. Las emprendedoras que se inscriben primero pagan menos y aseguran
+                su lugar en un bootcamp que cambiará la forma en que comunicas y vendes tu producto.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
