@@ -72,7 +72,7 @@ const modules = [
     time: '1h 30min',
     icon: Brain,
     color: '#C49A2B',
-    description: 'La IA no reemplaza tu voz, la amplifica. En este módulo usarás las tres herramientas más poderosas del momento — ChatGPT, Claude y Gemini — en tiempo real para generar descripciones de producto, responder objeciones de clientas, crear ideas de contenido y optimizar tu bio de Instagram. Todo personalizado para tu negocio, no genérico.',
+    description: 'La IA no reemplaza tu voz, la amplifica. En este módulo usarás las tres herramientas más poderosas del momento — ChatGPT, Claude y Gemini — en tiempo real para generar descripciones de producto, responder objeciones de clientas, crear ideas de contenido y optimizar tu biografía de Instagram. Todo personalizado para tu negocio, no genérico.',
     highlights: [
       '4 prompts personalizados listos para usar',
       'Banco de respuestas para objeciones en DMs',
