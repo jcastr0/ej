@@ -688,11 +688,11 @@ const Bootcamp = () => {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="h-60 overflow-hidden">
+                <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6 space-y-3">
