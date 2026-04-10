@@ -105,7 +105,7 @@ const team = [
   {
     name: 'Jhonatan Castro',
     role: 'IA aplicada e infraestructura digital',
-    image: '/images/jhonatan.jpg',
+    image: '/images/jhonatan.png',
     bio: 'Ingeniero de sistemas, magíster y docente universitario. Especialista en inteligencia artificial aplicada a negocios.',
   },
 ];
