@@ -25,6 +25,8 @@ import BusinessModelCanvas from '@/pages/BusinessModelCanvas';
 import ValuePropositionCanvas from '@/pages/ValuePropositionCanvas';
 import PropuestaValor from '@/pages/PropuestaValor';
 import Bootcamp from '@/pages/Bootcamp';
+import EncuestaBootcamp from '@/pages/EncuestaBootcamp';
+import ResultadosEncuesta from '@/pages/ResultadosEncuesta';
 import Navbar from '@/components/Navbar';
 
 const HomePage = () => (
@@ -64,6 +66,8 @@ function App() {
           <Route path="/value-proposition-canvas" element={<ValuePropositionCanvas />} />
           <Route path="/propuesta-valor" element={<PropuestaValor />} />
           <Route path="/bootcamp" element={<Bootcamp />} />
+          <Route path="/encuesta-bootcamp" element={<EncuestaBootcamp />} />
+          <Route path="/resultados-encuesta" element={<ResultadosEncuesta />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Toaster />
