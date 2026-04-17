@@ -28,6 +28,7 @@ import Bootcamp from '@/pages/Bootcamp';
 import EncuestaBootcamp from '@/pages/EncuestaBootcamp';
 import ResultadosEncuesta from '@/pages/ResultadosEncuesta';
 import Navbar from '@/components/Navbar';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 
 const HomePage = () => (
   <>
@@ -71,6 +72,7 @@ function App() {
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Toaster />
+        <WhatsAppFloat />
       </div>
     </BlogProvider>
   );
