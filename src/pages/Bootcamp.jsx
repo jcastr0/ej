@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const whatsappLink = 'https://chat.whatsapp.com/H7tDkda2guM37g2o4GEEIr';
+const whatsappLink = 'https://wa.me/573013528537?text=Hola%2C%20quiero%20inscribirme%20en%20el%20Bootcamp%20de%20Marketing%20Digital%20%2B%20IA';
 
 /* ─── Data ───────────────────────────────────── */
 
